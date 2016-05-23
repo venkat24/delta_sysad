@@ -7,4 +7,5 @@ do
 	head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16 > $file
 	sudo chmod 444 $file
 	touch -d "2 days ago" $file
+	chattr +i $file
 done
